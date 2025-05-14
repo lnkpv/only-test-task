@@ -17,3 +17,7 @@ Test task for the vacancy of frontend developer
 bun install
 bun run dev
 ```
+
+## Demo
+
+https://only-test-task-one.vercel.app/
