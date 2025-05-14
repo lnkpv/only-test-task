@@ -1,0 +1,12 @@
+@use '../../styles/variables' as vars;
+
+g {
+
+  .circle-point.active {
+    stroke: rgba(#303E5880, 0.5);
+    stroke-width: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

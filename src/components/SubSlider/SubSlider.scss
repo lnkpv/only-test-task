@@ -1,0 +1,106 @@
+@use '../../styles/variables' as vars;
+
+.swiper {
+  width: auto;
+  height: 224px;
+
+  .swiper-wrapper {
+    .swiper-slide {
+      max-width: 166px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      &.odd {
+        max-width: 255px;
+      }
+
+      .year-item {
+        font-family: "Bebas Neue", cursive;
+        font-size: 16px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        color: vars.$blue-color;
+      }
+      .desc-item {
+        font-size: 14px;
+        line-height: 145%;
+        color: vars.$line-color;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    
+    .swiper-pagination-bullet {
+      width: 6px;
+      height: 6px;
+      background: vars.$line-color;
+      opacity: 0.4;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+
+
+  @media (min-width: 768px) {
+    padding: 0 84px;
+    height: 100%;
+
+    .swiper-wrapper {
+
+      .swiper-slide {
+        max-width: 320px;
+
+        &.odd {
+        max-width: 400px;
+        }
+
+        .year-item {
+          font-size: 25px;
+        }
+        .desc-item {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+    }
+    .swiper-button-prev, .swiper-button-next {
+        position: absolute;
+        height: 100%;
+        width: 80px;
+        margin-top:0;
+        top: 0;
+        bottom: 0;
+        background: vars.$background-color;
+        z-index: 1;
+    }
+    .swiper-button-prev{
+      left: 0px;
+    }
+    .swiper-button-next{
+      right: 0;
+    }
+
+    .swiper-button-prev::after, .swiper-button-next::after{
+      font-size: 12px;
+      font-weight: 700;
+      color: vars.$blue-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      border-radius: 100%;
+      z-index: 2;
+    }
+
+    .swiper-button-disabled{
+      opacity: 0;
+      cursor: not-allowed;
+    }
+  }
+}
